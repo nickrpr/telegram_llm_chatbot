@@ -33,10 +33,10 @@ def llm_handle_response(text: str):
 
     # We use the tokenizer's chat template to format each message - see https://huggingface.co/docs/transformers/main/en/chat_templating
     messages = [
-        {
-            "role": "system",
-            "content": "Act in the following as a funny and friendly chatbot.",
-        },
+        # {
+        #     "role": "system",
+        #     "content": "You are a friendly chatbot who always responds happily.",
+        # },
         {"role": "user", "content": text},
     ]
     prompt = pipe.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
