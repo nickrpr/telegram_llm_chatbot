@@ -35,12 +35,12 @@ def llm_handle_response(text: str):
     messages = [
         {
             "role": "system",
-            "content": "You are a friendly chatbot.",
+            "content": "Act in the following as a funny and friendly chatbot.",
         },
         {"role": "user", "content": text},
     ]
     prompt = pipe.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    outputs = pipe(prompt, max_new_tokens=512, do_sample=True, temperature=0.7, top_k=50, top_p=0.95)
+    outputs = pipe(prompt, max_new_tokens=256, do_sample=True, temperature=0.7, top_k=50, top_p=0.95)
 
     generated_text = outputs[0]["generated_text"]
     # Bereinige die Ausgabe
