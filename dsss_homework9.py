@@ -4,7 +4,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 import torch
 from transformers import pipeline
 
-API_TOKEN: Final = '7815395406:AAEevGa9i66pqMwM1om2dIa3trb03KJBrcU'
+API_TOKEN: Final = <myToken>
 BOT_USERNAME: Final = '@dsss_ex9_llm_bot'
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
